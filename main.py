@@ -13,7 +13,6 @@ print("Bot running in tg")
 updater = telegram.ext.Updater(api_key)
 disp = updater.dispatcher
 
-ShelfFile = shelve.open('shelf')
 ShelfFile['merhi'] = ""
 
 class RepeatedTimer(object):
@@ -56,8 +55,11 @@ def printit (update,context):
     f.write(str(results[len(results)-15]))
     f.close()
     chosenData =results[len(results)-1]
+    ShelfFile = shelve.open('shelf')
+
     if(ShelfFile['merhi']!=chosenData['tokenID']):
         ShelfFile['merhi']=chosenData['tokenID']
+        ShelfFile.close()
         print(chosenData)
         message = outputMessage(chosenData)
         update.message.reply_text(message,parse_mode=ParseMode.HTML)
