@@ -51,9 +51,6 @@ def printit (update,context):
     page = requests.get(url)
     res = page.json()
     results = res['result']
-    f = open('./write.txt','w')
-    f.write(str(results[len(results)-15]))
-    f.close()
     chosenData =results[len(results)-1]
     ShelfFile = shelve.open('shelf')
 
