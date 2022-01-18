@@ -72,7 +72,7 @@ def printit (update,context):
 
 def startList(update,context):
     update.message.reply_text("Fetching updates")
-    rt = RepeatedTimer(15.0, printit, update,context) # it auto-starts, no need of rt.start()
+    rt = RepeatedTimer(60.0, printit, update,context) # it auto-starts, no need of rt.start()
 
 disp.add_handler(telegram.ext.CommandHandler("start",startList))
 
