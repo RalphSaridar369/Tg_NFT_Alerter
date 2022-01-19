@@ -67,7 +67,7 @@ def printit (update,context):
             message +="\n\n\n"
             # real_balance = str("{0:.2f}".format(float(res['result'])/math.pow(10,18)))+" Matic"
             # update.message.reply_text(real_balance)
-        sleep(5)
+        sleep(8)
     if(len(message)>0):
         update.message.reply_text(message,parse_mode=ParseMode.HTML)
 
@@ -76,7 +76,7 @@ def startList(update,context):
     while True:
         printit(update,context)
         print('\n')
-        sleep(10)
+        sleep(180)
     # rt = RepeatedTimer(10.0, printit, update,context) # it auto-starts, no need of rt.start()
 
 disp.add_handler(telegram.ext.CommandHandler("start",startList))
