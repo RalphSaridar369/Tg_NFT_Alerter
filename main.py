@@ -5,6 +5,7 @@ from telegram import *
 from threading import Timer
 from time import sleep
 
+READY = 1
 api_key = '5055335035:AAG3s1i6tGyQhJyv0197Xl3j8CY9CAUzhDI'
 api_key_dev = "2121277949:AAGnsnht0fJVh_zrsybJdpuc9TgJn6YOo5c"
 pol_key = "SIZEEU48BVGR4U9UHWQ8S5DXT8N9IMMZ8V"
@@ -51,6 +52,7 @@ def outputMessage(data):
 
 def printit (update,context):
     message = ""
+    global READY = 2
     for i in add:
         print("running ",i)
         ShelfFile = shelve.open('shelf')
@@ -70,10 +72,11 @@ def printit (update,context):
         sleep(8)
     if(len(message)>0):
         update.message.reply_text(message,parse_mode=ParseMode.HTML)
+    READY = 1
 
 def startList(update,context):
     update.message.reply_text("Fetching updates")
-    while True:
+    while READY == 1:
         printit(update,context)
         print('\n')
         sleep(180)
