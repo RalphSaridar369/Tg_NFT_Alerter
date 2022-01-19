@@ -60,8 +60,8 @@ def printit (update,context):
         results = res['result']
         chosenData =results[len(results)-1]
 
-        if(chosenData['tokenID'] not in ShelfFile[i]):
-            ShelfFile[i]+="-"+chosenData['tokenID']
+        if(ShelfFile[i] != chosenData['tokenID']):
+            ShelfFile[i]=chosenData['tokenID']
             ShelfFile.close()
             message += outputMessage(chosenData)
             message +="\n\n\n"
