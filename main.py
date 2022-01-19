@@ -16,7 +16,7 @@ for i in add:
     ShelfFile[i]=''
 
 ShelfFile.close()
-updater = telegram.ext.Updater(api_key_dev)
+updater = telegram.ext.Updater(api_key)
 disp = updater.dispatcher
 
 class RepeatedTimer(object):
