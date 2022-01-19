@@ -52,7 +52,8 @@ def outputMessage(data):
 
 def printit (update,context):
     message = ""
-    global READY = 2
+    global READY
+    READY = 2
     for i in add:
         print("running ",i)
         ShelfFile = shelve.open('shelf')
