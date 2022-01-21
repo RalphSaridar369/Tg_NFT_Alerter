@@ -6,7 +6,7 @@ from threading import Timer
 from time import sleep
 
 READY = 1
-api_key = '5055335035:AAG3s1i6tGyQhJyv0197Xl3j8CY9CAUzhDI'
+api_key = '5165761049:AAEEN8aFkydaXd9M_1c5V6ZB33pSjW4Kuiw'
 api_key_dev = "2121277949:AAGnsnht0fJVh_zrsybJdpuc9TgJn6YOo5c"
 pol_key = "SIZEEU48BVGR4U9UHWQ8S5DXT8N9IMMZ8V"
 add = ["0x06761b0097c5f658bd368b453b330f7e26a5ea7e","0xc5becc7e77144670de0c52896e87bd041e93d93e","0x74d1297985f921f08775451769add005dff1c1d3","0xd8f4c502b80d084bd53a91800947c5c0483f640f","0x06fe965cf71a8c4d9c1fc5865e2a82fff5b87ad9","0x7f8cb1b15bd8b405c7a2bd631ed323da72409f04","0x3bf228ba3fcbcc1ee7f367bfd2b8ecadb98cd8b4"]
